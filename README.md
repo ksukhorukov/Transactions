@@ -24,7 +24,7 @@ Getting all transactions for cars:
 
 ``[1, 2]``
 
-Getting spendings summary of particular type:
+Getting spendings summary. A sum of all transactions that are transitively linked by their parent_id to transaction_id:
 
 ``GET http://localhost:3000/transactionservice/sum/2``
 
