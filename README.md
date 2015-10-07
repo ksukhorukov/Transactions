@@ -4,7 +4,7 @@ You could find more details about the challange by reading  [CodeChallenge] [ChD
 
 # Installation
 
-``rvm use uby-2.1.5@transactions --create``
+``rvm use ruby-2.1.5@transactions --create``
 
 ``bundle``
 
