@@ -19,6 +19,7 @@ class TransactionsController < ApplicationController
 
   def create
     result = Transaction.find_or_initialize_by(id: params[:id]).update_attributes(transaction_params)
+    
     if result
       render json: '{ "status": "OK" }'
     else
