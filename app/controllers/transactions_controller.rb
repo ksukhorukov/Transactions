@@ -47,7 +47,7 @@ class TransactionsController < ApplicationController
         sum += Transaction.find_by_id(parent_id).amount
         render json: "{ \"sum\": #{sum} }"
       else
-        render json: zero_sum
+        render json: "{ \"sum\": #{transaction.amount} }"
       end
     else
       render json: zero_sum
