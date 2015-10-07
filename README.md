@@ -37,3 +37,5 @@ Showing particular transaction:
 ``{"amount":7000.0,"type":"cars","parent_id":2}``
 
 # [EOF]
+
+[ChD]: https://github.com/ksukhorukov/Transactions/blob/master/CodeChallenge.pdf
