@@ -34,7 +34,7 @@ Showing particular transaction:
 
 ``GET http://localhost:3000/transactionservice/transaction/2``
 
-``{"amount":7000.0,"type":"cars","parent_id":2}``
+``{"amount":7000.0,"type":"cars","parent_id":1}``
 
 # [EOF]
 
