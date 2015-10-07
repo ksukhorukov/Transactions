@@ -4,7 +4,7 @@ You could find more details about the challange by reading  [CodeChallenge] [ChD
 
 # Installation
 
-``rvm use uby-2.1.5@transactions --create``
+``rvm use ruby-2.1.5@transactions --create``
 
 ``bundle``
 
@@ -24,16 +24,18 @@ Getting all transactions for cars:
 
 ``[1, 2]``
 
-Getting spendings summary of particular type:
+Getting spendings summary. A sum of all transactions that are transitively linked by their parent_id to transaction_id:
 
-``GET http://localhost:3000/transactionservice/sum/11``
+``GET http://localhost:3000/transactionservice/sum/2``
 
-``{ "sum": 19000.0 }``
+``{ "sum": 13000.0 }``
 
 Showing particular transaction:
 
-``GET http://localhost:3000/transactionservice/transaction/11``
+``GET http://localhost:3000/transactionservice/transaction/2``
 
-``{"amount":7000.0,"type":"cars","parent_id":2}``
+``{"amount":7000.0,"type":"cars","parent_id":1}``
 
 # [EOF]
+
+[ChD]: https://github.com/ksukhorukov/Transactions/blob/master/CodeChallenge.pdf
