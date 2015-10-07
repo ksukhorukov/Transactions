@@ -1,6 +1,6 @@
 class ShowTransactionTest < ActionDispatch::IntegrationTest
 
-  test 'get types of transactions' do 
+  test 'show particular transaction' do 
     get '/transactionservice/transaction/1'
     assert_equal 200, response.status
     assert_equal Mime::JSON, response.content_type
