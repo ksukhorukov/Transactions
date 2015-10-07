@@ -43,8 +43,6 @@ class TransactionsController < ApplicationController
         transactions.each do |transaction|
           sum += transaction.amount
         end
-        parent = Transaction.find_by(parent_id: parent_id)
-        sum += parent.amount
         render json: "{ \"sum\": #{sum} }"
       else
         render json: zero_sum

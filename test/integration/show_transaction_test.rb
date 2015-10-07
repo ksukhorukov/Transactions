@@ -6,7 +6,7 @@ class ShowTransactionTest < ActionDispatch::IntegrationTest
     assert_equal Mime::JSON, response.content_type
 
     result = JSON.parse(response.body)
-    assert_equal result,  { "amount" => 6000.0, "type" => "cars" }
+    assert_equal result,  { "amount" => 6000.0, "type" => "cars", "parent_id" =>  1 }
   end
 
 end

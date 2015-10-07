@@ -2,6 +2,7 @@ trans1:
   id: 1
   type: cars
   amount: 6000.0
+  parent_id: 1
 
 
 trans2: 

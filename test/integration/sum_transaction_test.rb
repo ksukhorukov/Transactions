@@ -6,7 +6,7 @@ class SumTransactionTest < ActionDispatch::IntegrationTest
     assert_equal Mime::JSON, response.content_type
 
     result = JSON.parse(response.body)
-    assert_equal result["sum"],  14000.0
+    assert_equal result["sum"],  13000.0
   end
 
   test 'no transaction means no summary' do 
