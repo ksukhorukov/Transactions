@@ -8,6 +8,8 @@ You could find more details about the challange by reading  [CodeChallenge] [ChD
 
 ``bundle``
 
+``rake test``
+
 ``rails -s``
 
 # Testing transactions creation
