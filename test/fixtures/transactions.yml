@@ -1,0 +1,19 @@
+trans1: 
+  id: 1
+  type: cars
+  amount: 6000.0
+
+
+trans2: 
+  id: 2
+  type: cars
+  amount: 7000.0
+  parent_id: 1
+
+trans3: 
+  id: 3
+  type: fashion
+  amount: 3000.0
+
+
+
