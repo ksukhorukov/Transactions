@@ -1,14 +1,20 @@
 
 class TransactionsController < ApplicationController
   skip_before_filter :verify_authenticity_token
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   def delete_null_values(record)
     record.attributes.delete_if { |k, v| v.nil?}
   end
 
+  def record_not_found
+    render json: '{ "Error": "There is no such transaction"}'
+  end
+
   def show
-    @transaction = Transaction.find(params[:id])
+    @transaction = Transaction.find(params[:id])      
     render json: delete_null_values(@transaction).except("id").to_json
+
   end
 
   def create
