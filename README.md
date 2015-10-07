@@ -26,13 +26,13 @@ Getting all transactions for cars:
 
 Getting spendings summary of particular type:
 
-``GET http://localhost:3000/transactionservice/sum/11``
+``GET http://localhost:3000/transactionservice/sum/2``
 
-``{ "sum": 19000.0 }``
+``{ "sum": 13000.0 }``
 
 Showing particular transaction:
 
-``GET http://localhost:3000/transactionservice/transaction/11``
+``GET http://localhost:3000/transactionservice/transaction/2``
 
 ``{"amount":7000.0,"type":"cars","parent_id":2}``
 
