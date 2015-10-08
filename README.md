@@ -8,6 +8,8 @@ You could find more details about the challange by reading  [CodeChallenge] [ChD
 
 ``bundle``
 
+``rake db:setup``
+
 ``rake test``
 
 ``rails -s``
