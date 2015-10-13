@@ -15,7 +15,7 @@ class SumTransactionTest < ActionDispatch::IntegrationTest
     assert_equal Mime::JSON, response.content_type
 
     result = JSON.parse(response.body)
-    assert_equal result["sum"],  0.0
+    assert_equal result, { "Error" => "There is no transactions with parent_id: 4 neither transaction with id: 4"}
   end
 
 end

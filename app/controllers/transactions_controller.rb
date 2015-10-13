@@ -34,7 +34,7 @@ class TransactionsController < ApplicationController
   end
 
   def sum
-    zero_sum = '{ "sum": 0.0 }'
+    not_found =  "{ \"Error\": \"There is no transactions with parent_id: #{params[:id]} neither transaction with id: #{params[:id]}\"}"
     transaction = Transaction.find_by_id(params[:id])
     unless transaction.nil?
       parent_id = transaction.parent_id
@@ -50,7 +50,7 @@ class TransactionsController < ApplicationController
         render json: "{ \"sum\": #{transaction.amount} }"
       end
     else
-      render json: zero_sum
+      render json: not_found
     end
   end
 
